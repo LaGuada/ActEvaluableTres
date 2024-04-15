@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="34dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editUsuario"
+        android:hint="Introduce tu usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/editPass"
+        android:hint="Introduce tu contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="24dp" /> <!-- Aumenté el margen inferior -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"> <!-- Asegura que los botones estén centrados -->
+
+        <Button
+            android:id="@+id/botonLogin"
+            android:text="Login"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:background="@color/purple_500"
+        android:layout_marginEnd="8dp" /> <!-- Añade un margen al final del botón Login -->
+
+        <Button
+            android:id="@+id/botonRegistro"
+            android:text="Registrar"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:background="@color/purple_500"
+        android:layout_marginStart="8dp" /> <!-- Añade un margen al inicio del botón Registrar -->
+
+    </LinearLayout>
+</LinearLayout>

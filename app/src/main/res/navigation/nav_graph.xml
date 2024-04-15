@@ -1,0 +1,83 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.actevaluabletres.ui.fragments.MainFragment"
+        android:label="@string/label_main"
+        tools:layout="@layout/fragment_main">
+        <argument
+            android:name="correo"
+            app:argType="string" />
+        <argument
+            android:name="nombreUsuario"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_mainFragment_to_leagueFragment"
+            app:destination="@id/leagueFragment">
+            <argument
+                android:name="leagueName"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_mainFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/leagueFragment"
+        android:name="com.example.actevaluabletres.ui.fragments.LeagueFragment"
+        android:label="Liga"
+        tools:layout="@layout/fragment_league">
+        <argument
+            android:name="leagueName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_leagueFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.actevaluabletres.ui.fragments.FavoritesFragment"
+        android:label="Favoritos"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.navegacion.ui.fragments.RegistroFragment"
+        android:label="RegistroFragment"
+        tools:layout="@layout/fragment_registro">
+        <action
+            android:id="@+id/action_registroFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.actevaluabletres.ui.fragments.LoginFragment"
+        android:label="Inicie sesión"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registroFragment"
+            app:destination="@id/registroFragment" />
+        <argument
+            android:name="correo"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="password"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="nombreUsuario"
+            app:argType="string"
+            android:defaultValue="Usuario Anónimo" />
+    </fragment>
+</navigation>

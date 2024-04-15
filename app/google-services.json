@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1043130008842",
+    "project_id": "actevaluabletres",
+    "storage_bucket": "actevaluabletres.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043130008842:android:80479358711251cf65a6f3",
+        "android_client_info": {
+          "package_name": "com.example.actevaluabletres"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV6WosijPjXEm1A2bJthU2Xyii-JKtfrQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
